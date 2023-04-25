@@ -4,29 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".okhttp.OkHttpActivity"
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btn_get"
+        android:id="@+id/btn_okhttp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="获取全国行政区划"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="OkHttp（get）"/>
 
     <Button
-        android:id="@+id/btn_get_verification"
+        android:id="@+id/btn_okhttp2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="获得验证码和图片"/>
-
-    <Button
-        android:id="@+id/btn_111"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="跳下一Activity"/>
-
+        android:text="OkHttp（post）"/>
 
 </LinearLayout>

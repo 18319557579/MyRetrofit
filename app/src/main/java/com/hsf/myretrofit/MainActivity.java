@@ -1,5 +1,6 @@
 package com.hsf.myretrofit;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -10,9 +11,12 @@ import com.hsf.myretrofit.model.verification.VerificationResponse;
 import com.hsf.myretrofit.network.AdministrativeService;
 import com.hsf.myretrofit.network.ServiceCreator;
 import com.hsf.myretrofit.network.VerificationService;
+import com.hsf.myretrofit.okhttp.OkHttpActivity;
 import com.hsf.myretrofit.util.MyUtil;
 import com.hsf.myretrofit.view_binding.BaseActivity;
 
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -57,6 +61,14 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
                                 Log.d("Daisy", "出错了 " + call + " / " + t);
                             }
                         });
+            }
+        });
+
+        binding.btn111.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, OkHttpActivity.class);
+                startActivity(intent);
             }
         });
     }
